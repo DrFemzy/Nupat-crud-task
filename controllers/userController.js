@@ -119,6 +119,7 @@ const updateUser = async (req, res) => {
 
 // Delete User by Id
 const deleteUser = async (req, res) => {
+    
     User.deleteOne({_id: req.params.id})
         .then(_=>{
             return res.status(200).json({
